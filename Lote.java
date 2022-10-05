@@ -1,16 +1,22 @@
 import java.util.Date;
+import java.util.UUID;
 
 public class Lote {
-
+    private String id;
     private int quantidade;
 
     private Date dataValidade;
 
-    private Produto produto;
+    private String produtoId;
 
-    public Lote(int quant,Date dataV,Produto produto){
-        this.quantidade = quant;
-        this.dataValidade = dataV;
-        this.produto = produto;
+    public Lote(String produtoId, int quantidade, Date dataValidade){
+        this.id = this.id = UUID.randomUUID().toString();
+        this.quantidade = quantidade;
+        this.dataValidade = dataValidade;
+        this.produtoId = produtoId;
+    }
+
+    public String getId() {
+        return this.id;
     }
 }
