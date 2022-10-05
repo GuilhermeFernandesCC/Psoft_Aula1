@@ -1,24 +1,12 @@
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 
 public class Sistema {
-    private Fachada fachada;
+    private static Fachada fachada = new Fachada();
     public static void main(String[] args) {
+        fachada.addProduto("Leite","Betania",8.00);
 
-    }
-    public void  addProdduto(String nome,String fabricante,double preco){
-        fachada.addProduto(nome,fabricante,preco);
-    }
-
-    public void  addLote(String produtoId,int quantidade,Date dataValidade){
-        fachada.addLote(produtoId,quantidade,dataValidade);
-    }
-
-    public Collection<Produto> listarProdutos(){
-        return fachada.listarProdutos();
-    }
-    public String[] listarLotes(){
-        return fachada.listarLotes();
     }
 
 }

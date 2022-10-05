@@ -2,8 +2,8 @@ import java.util.Collection;
 import java.util.Date;
 
 public class Fachada {
-    private LoteServices loteServices;
-    private ProdutoServices produtoServices;
+    private LoteServices loteServices = new LoteServices();
+    private ProdutoServices produtoServices = new ProdutoServices();
     public String addProduto(String nome, String fabricante, double preco){
         return produtoServices.addProduto(nome, fabricante, preco);
     }
@@ -12,7 +12,7 @@ public class Fachada {
         return loteServices.addLote(produtoId,quantidade,dataValidade);
     }
 
-    public Collection<Produto> listarProdutos() {
+    public int[] listarProdutos() {
         return produtoServices.listarProdutos();
     }
 
