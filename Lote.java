@@ -10,7 +10,7 @@ public class Lote {
     private String produtoId;
 
     public Lote(String produtoId, int quantidade, Date dataValidade){
-        this.id = this.id = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.quantidade = quantidade;
         this.dataValidade = dataValidade;
         this.produtoId = produtoId;
