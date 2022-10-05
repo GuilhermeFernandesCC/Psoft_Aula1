@@ -1,10 +1,25 @@
+import java.util.Collection;
 import java.util.Date;
 
 public class Sistema {
+    private Fachada fachada;
     public static void main(String[] args) {
-        Date dataV = new Date(2022,9,23);
-        Produto prod = new Produto("Leite","Betania",8.00);
-        Lote lote = new Lote(100, dataV,prod);
+
     }
+    public void  addProdduto(String nome,String fabricante,double preco){
+        fachada.addProduto(nome,fabricante,preco);
+    }
+
+    public void  addLote(String produtoId,int quantidade,Date dataValidade){
+        fachada.addLote(produtoId,quantidade,dataValidade);
+    }
+
+    public Collection<Produto> listarProdutos(){
+        return fachada.listarProdutos();
+    }
+    public String[] listarLotes(){
+        return fachada.listarLotes();
+    }
+
 }
 
